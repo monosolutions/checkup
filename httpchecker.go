@@ -84,6 +84,7 @@ func (c HTTPChecker) Check() (Result, error) {
 	if err != nil {
 		return result, err
 	}
+
 	if c.Headers != nil {
 		for key, header := range c.Headers {
 			if strings.EqualFold(key, "host") {
